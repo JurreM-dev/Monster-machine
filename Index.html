@@ -1,0 +1,67 @@
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  
+  <style>
+    body {
+      text-align: center;
+    }
+    #selector {
+      font-size: 30px;
+      border-radius: 25px;
+      text-align: center;
+      border: 3px solid black;
+    }
+    #link {
+      border: 2px solid black;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    div {
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+<h1 id="maintitel">MONSTER MACHINE</h1>
+  <select id="selector">
+    <option>version 1.0 (most recent)</option>
+  </select>
+  <br>
+  <br>
+  <br>
+    <a id="link" href="">launch this version</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>update logs</h2>
+    <br>
+    <div>
+    <h3>version 1.0</h3>
+    <ul>
+      <li>First official version</li>
+      <li>Added godly and ultra rare monsters</li>
+      <li>Added version launcher</li>
+      <li>Adding monster deletion</li>
+    </ul>
+    </div>
+  <script>
+    let dropdown = document.getElementById("selector")
+    
+    setInterval(() => {
+      let chosen = dropdown.value
+      if (chosen === "version 1.0 (most recent)") {
+        document.getElementById("link").href = "V1/Index.html"
+      }
+    }, 100)
+  </script>
+     <script>
+    if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+  </script>
+</body>
