@@ -1,4 +1,5 @@
 <head>
+<head>
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json">
@@ -8,7 +9,7 @@
       text-align: center;
     }
     #selector {
-      font-size: 30px;
+      font-size: 28px;
       border-radius: 25px;
       text-align: center;
       border: 3px solid black;
@@ -22,13 +23,15 @@
     }
     div {
       text-align: justify;
+      margin: 20px;
     }
   </style>
 </head>
 <body>
 <h1 id="maintitel">MONSTER MACHINE</h1>
   <select id="selector">
-    <option>version 1.0 (most recent)</option>
+    <option>version 1.0.1 (most recent)</option>
+    <option>version 1.0</option>
   </select>
   <br>
   <br>
@@ -41,7 +44,19 @@
     <h2>update logs</h2>
     <br>
     <div>
+      <h3>version 1.0.1</h3>
+      <h4>30-04-2026</h4>
+    <ul>
+      <p><strong>added</strong></p>
+      <li>Added extra monsters</li>
+      <p><strong>changes</strong></p>
+      <li>pity system resets when you get the monster to prevent 100%</li>
+
+    </ul>
+    </div>
+    <div>
     <h3>version 1.0</h3>
+    <h4>29-04-2026</h4>
     <ul>
       <li>First official version</li>
       <li>Added godly and ultra rare monsters</li>
@@ -54,8 +69,11 @@
     
     setInterval(() => {
       let chosen = dropdown.value
-      if (chosen === "version 1.0 (most recent)") {
-        document.getElementById("link").href = "V1/index.html"
+      if (chosen === "version 1.0.1 (most recent)") {
+        document.getElementById("link").href = "V1.0.1/Index.html"
+      }
+      else if (chosen === "version 1.0") {
+        document.getElementById("link").href = "V1/Index.html"
       }
     }, 100)
   </script>
